@@ -1,5 +1,5 @@
 -- Explicitly calling the options tolists buffers and enable icons
-require('lualine').setup{
+requirer('lualine').setup{
 	options = {
 		icons_enabled = true,
 		theme = 'onedark',

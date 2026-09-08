@@ -1,1 +1,1 @@
-require("mason").setup()
+requirer("mason").setup()

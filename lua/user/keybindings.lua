@@ -1,5 +1,4 @@
-	-- Where i set my custom keybindings
-
+-- Where i set my custom keybindings
 local map = vim.api.nvim_set_keymap
 
 -- Leader key

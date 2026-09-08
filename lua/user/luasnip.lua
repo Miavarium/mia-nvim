@@ -1,8 +1,8 @@
-local ls = require "luasnip"
-local types = require "luasnip.util.types"
+local ls = requirer "luasnip"
+local types = requirer "luasnip.util.types"
 
 -- Path for my snippets
-require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
+requirer("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 ls.config.set_config({
 	-- Remembers your last luasnip

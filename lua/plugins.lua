@@ -1,6 +1,6 @@
 -- Add plugins
 vim.pack.add({
-  "https://www.github.com/nvim-tree/nvim-tree.lua",
+  'https://www.github.com/nvim-tree/nvim-tree.lua',
   'https://github.com/vyfor/cord.nvim',
   'https://github.com/nvim-telescope/telescope.nvim',
   'https://github.com/nvim-tree/nvim-web-devicons',
@@ -8,11 +8,15 @@ vim.pack.add({
   'https://github.com/nvim-mini/mini.nvim',
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
-  'https://github.com/neovim/nvim-lspconfig',
-  'https://github.com/mason-org/mason.nvim',
+  'https://github.com/saghen/blink.lib',
+  'https://github.com/saghen/blink.cmp',
+  'https://github.com/ibhagwan/fzf-lua',
+  'https://github.com/folke/which-key.nvim',
+  'https://github.com/akinsho/toggleterm.nvim',
 })
 
 -- Nvim-tree
+
 require("nvim-tree").setup({
   filters = {
     dotfiles = false
@@ -27,6 +31,11 @@ require("cord").setup({
   display = {
     theme = 'minecraft',
   },
+})
+
+-- Which-key
+require("which-key").setup({
+  delay = 1000,
 })
 
 -- Telescope
@@ -49,7 +58,6 @@ require("mini.statusline").setup({})
 -- Gitsigns
 require("gitsigns").setup({})
 
-
 -- Treesitter
 require("nvim-treesitter").install{
     'c',
@@ -68,9 +76,13 @@ require("nvim-treesitter").install{
     'bash',
 }
 
--- =======
--- Require
--- =======
-require("options")
-require("keymaps")
-require("auto")
+-- CMP
+local cmp = require('blink.cmp')
+cmp.build():pwait()
+cmp.setup()
+
+-- Floating terminal
+require("toggleterm").setup({
+
+})
+
