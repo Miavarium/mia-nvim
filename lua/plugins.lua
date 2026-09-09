@@ -1,6 +1,5 @@
 -- Add plugins
 vim.pack.add({
-  'https://www.github.com/nvim-tree/nvim-tree.lua',
   'https://github.com/vyfor/cord.nvim',
   'https://github.com/nvim-telescope/telescope.nvim',
   'https://github.com/nvim-lua/plenary.nvim', -- For telescope
@@ -14,19 +13,12 @@ vim.pack.add({
   'https://github.com/folke/which-key.nvim',
   'https://github.com/akinsho/toggleterm.nvim',
   'https://github.com/rebelot/kanagawa.nvim',
-  'https://github.com/j-hui/fidget.nvim'
+  'https://github.com/j-hui/fidget.nvim',
+  'https://github.com/brianhuster/live-preview.nvim'
 })
 
--- Nvim-tree
-
-require("nvim-tree").setup({
-  filters = {
-    dotfiles = false
-  },
-})
-vim.keymap.set("n", "<leader>e", function()
-  require("nvim-tree.api").tree.toggle()
-end, { desc = "Toggle NvimTree"})
+-- Live preview
+require('livepreview.config').set()
 
 -- Cord
 require("cord").setup({
