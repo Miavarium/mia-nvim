@@ -3,8 +3,8 @@ vim.pack.add({
   'https://www.github.com/nvim-tree/nvim-tree.lua',
   'https://github.com/vyfor/cord.nvim',
   'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/nvim-lua/plenary.nvim', -- For telescope
   'https://github.com/nvim-tree/nvim-web-devicons',
-  'https://github.com/nvim-lua/plenary.nvim',
   'https://github.com/nvim-mini/mini.nvim',
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
@@ -13,6 +13,8 @@ vim.pack.add({
   'https://github.com/ibhagwan/fzf-lua',
   'https://github.com/folke/which-key.nvim',
   'https://github.com/akinsho/toggleterm.nvim',
+  'https://github.com/rebelot/kanagawa.nvim',
+  'https://github.com/j-hui/fidget.nvim'
 })
 
 -- Nvim-tree
@@ -38,6 +40,9 @@ require("which-key").setup({
   delay = 1000,
 })
 
+-- Notifications
+require("fidget").setup()
+
 -- Telescope
 require("telescope").setup()
 
@@ -50,10 +55,10 @@ require("mini.indentscope").setup({})
 require("mini.pairs").setup({})
 require("mini.trailspace").setup({})
 require("mini.bufremove").setup({})
-require("mini.notify").setup({})
 require("mini.icons").setup({})
---require("mini.animate").setup({})
 require("mini.statusline").setup({})
+require("mini.files").setup({})
+--require("mini.animate").setup({})
 
 -- Gitsigns
 require("gitsigns").setup({})

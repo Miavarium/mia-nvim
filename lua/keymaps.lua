@@ -15,6 +15,8 @@ end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 
 map("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
+map("n", "<leader>e", ":lua MiniFiles.open()<cr>", { desc = "Open file picker"})
+
 -- Easier saving
 map("n", "<S-w>", ":w<cr>", {desc = "Save file"})
 map("n", "<S-q>", ":wq<cr>", {desc = "Save and quit file"})

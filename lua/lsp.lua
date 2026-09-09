@@ -17,7 +17,6 @@ require('mason-tool-installer').setup({
 	}
 })
 
-
 -- ===============
 -- LSP Keybindings
 -- ===============
